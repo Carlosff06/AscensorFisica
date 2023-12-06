@@ -1,0 +1,29 @@
+@keyframes abrirPuerta2{
+    from{
+        transform:translateX(0px);
+    }
+    to{
+        transform:translateX(40px);
+    }
+}
+@keyframes abrirPuerta1{
+    from{
+        transform:translateX(0px);
+    }
+    to{
+        transform:translateX(-40px);
+    }
+}
+.punto{
+    border:2px solid;
+}
+.puerta1{
+    animation-name: abrirPuerta1;
+    animation-duration: 5s;
+}
+.puerta2{
+    animation-name: abrirPuerta2;
+    animation-duration: 5s;
+
+    
+}

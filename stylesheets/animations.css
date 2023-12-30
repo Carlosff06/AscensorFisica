@@ -91,17 +91,20 @@
     }
     .cuartomecanismo{
         height:30%;
-        width:390px;
+        width:360px;
     }
     .paredes{
         height: 600px;
-        width:390px;
+        width:360px;
         justify-content: center;
         align-items: center;
     }
     .ascensor-completo{
+        width:100%;
         margin:0;
         padding:0px;
+        justify-content: center;
+        align-items: center;
     }
     .card1{
         width:100%;

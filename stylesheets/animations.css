@@ -1,0 +1,72 @@
+/*Animacion de la Polea*/
+@keyframes rotarPolea{
+    from{
+    
+        transform:rotate(0deg);
+    }
+    to{
+        
+        transform:rotate(90deg);
+        
+    }
+}
+@keyframes bajarPolea{
+    from{
+        transform:rotate(90deg);
+    }
+    to{
+        transform:rotate(0deg);
+    }
+}
+
+/*Animacion del Ascensor*/
+
+@keyframes controlUp{
+    from{
+    transform: translateY(0px);
+    }
+    to{
+    transform: translateY(-300%);
+}
+}
+@keyframes controlDown{
+    from{
+        transform: translateY(-300%);
+
+    }
+    to{
+        transform: translateY(0px);
+    
+    }
+}
+
+/*Animacion del Cable*/
+@keyframes cable{
+    from{
+        transform:translateY(0);
+    }
+    to {
+        transform:translateY(-400px);
+    }
+}
+@keyframes cableDown{
+    from{
+        transform: translateY(-400px);
+    }
+    to{
+        transform:translateY(0px);
+    }
+}
+
+@media (min-width: 1500px) {
+    .card1{
+        width:30%;
+        height: 24%;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1490px){
+    .card1{
+        width:50%;
+        height: 24%;
+    }
+}

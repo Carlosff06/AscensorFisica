@@ -83,10 +83,11 @@ canvas {
     
 
 }
-.btn-secondary.btn-active{
+.btn-secondary.btn-active, .btn-secondary:hover{
     color: red !important;
     border: 2px solid red !important;
 }
+
 .cable2{
     border:2px solid;
     width:1.6%;

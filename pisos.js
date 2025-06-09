@@ -42,19 +42,24 @@ document.getElementById('peso').value=0;
 );
 }
 function cambiarPiso(){
+    
+    if(!moviendo){
+        moviendo=true;
     puerta1.classList.remove('abrir')
     puerta1.classList.add('cerrar')
     puerta2.classList.remove('abrir')
     puerta2.classList.add('cerrar')
+    piso.classList.add('btn-active')
      setTimeout( subirPiso, 2000)
+     }
 }
 function subirPiso(){
-    if(document.getElementById('masa').value<600&&!moviendo){
+    if(document.getElementById('masa').value<600){
     document.getElementById('aceleracion').value=2;
     
    
     if(contador==0){
-        moviendo=true;
+       
         piso.classList.add('btn-active')
         mecanismo.classList.remove("down");
         mecanismo.classList.add("move");
@@ -85,7 +90,7 @@ function subirPiso(){
                 clearInterval(tiempo);
                 
                 piso.classList.remove('btn-active')
-                moviendo=false;
+               
                 puerta1.classList.remove('cerrar')
                 puerta2.classList.remove('cerrar')
                 puerta2.classList.add('abrir')
@@ -102,7 +107,7 @@ function subirPiso(){
     
 }
     else if(contador==1){
-        piso.classList.add('btn-active')
+        
         mecanismo.classList.remove("move");
         mecanismo.classList.remove("up");
         mecanismo.classList.add("down");
@@ -112,7 +117,7 @@ function subirPiso(){
         polea.classList.remove("subir");
         polea.classList.add("bajar");
         contador=0; 
-        moviendo=true;
+        
         document.getElementById('fuerza').value=document.getElementById('masa').value*Math.abs(parseFloat(document.getElementById('aceleracion').value));
         document.getElementById('tension').value = parseFloat(document.getElementById('peso').value) - parseFloat(document.getElementById('fuerza').value);
         
@@ -132,7 +137,7 @@ function subirPiso(){
                     
                     clearInterval(tiempo);
                     piso.classList.remove('btn-active')
-                    moviendo=false;
+                    
                     puerta1.classList.remove('cerrar')
                 puerta2.classList.remove('cerrar')
                 puerta2.classList.add('abrir')
@@ -153,6 +158,9 @@ function subirPiso(){
  
 }
 }
+setTimeout(()=> {
+     moviendo=false;
+},5500)
 
 }
 

@@ -24,12 +24,12 @@
         transform: translateX(0px);
     }
     to{
-        transform: translateX(-50%);
+        transform: translateX(-90%);
     }
 }
 @keyframes cerrarPuerta1{
     from{
-        transform: translateX(-20px);
+        transform: translateX(-90%);
     }
     to{
         transform: translateX(0px);
@@ -40,12 +40,12 @@
         transform: translateX(0px);
     }
     to{
-        transform: translateX(20px);
+        transform: translateX(90%);
     }
 }
 @keyframes cerrarPuerta2{
     from{
-        transform: translateX(20px);
+        transform: translateX(90%);
     }
     to{
         transform: translateX(0px);
